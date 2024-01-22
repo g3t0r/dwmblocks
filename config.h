@@ -2,7 +2,8 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	/* {"⌨", "sb-kbselect", 0, 30}, */
-  {" ", "curl wttr.in/Krakow?format=3 -s | awk -e '{print $2 \" \" $3}'", 120, 0},
+  {"", "/home/jan/.local/scripts/battery_status.sh", 60, 0},
+  {" ", "curl wttr.in/Krakow?format=1 -s", 120, 0},
   {"VOL: ", "amixer -D pulse sget Master | awk -F\"[][]\" '/Left:/ { print $2 \" \" $4}'", 0, 0},
   {"", "date", 5, 0}
 };
